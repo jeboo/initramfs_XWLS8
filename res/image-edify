@@ -1,0 +1,23 @@
+ui_print("");
+ui_print("");
+ui_print(" ########################## ");
+ui_print("#  Installing Custom ROM   #");
+ui_print("#  Built with PhilZ Touch  #");
+ui_print("#    CWM Based Recovery    #");
+ui_print(" ########################## ");
+ui_print("");
+show_progress(1.000000, 0);
+
+set_progress(0.100000);
+ui_print("Flashing kernel...");
+assert(restore_rom("/tmp/image"));
+
+set_progress(0.200000);
+ui_print("Formatting system...");
+assert(format("/system"));
+assert(mount("/system"));
+
+set_progress(0.300000);
+ui_print("Installing system files...");
+run_program("/tmp/install-system");
+
