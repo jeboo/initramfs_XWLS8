@@ -150,14 +150,14 @@ on fs
     setprop ro.crypto.fuse_sdcard false
 
 # for LogMeIn
-    mount ext4 /dev/block/mmcblk0p9 /system rw wait noatime remount
+#    mount ext4 /dev/block/mmcblk0p9 /system rw wait noatime remount
 
-    chown graphics /system/bin/RescueStarter
-    chmod 0755 /system/bin/RescueStarter
-    chown graphics /system/bin/RescueServer
-    chmod 0755 /system/bin/RescueServer
+#    chown graphics /system/bin/RescueStarter
+#    chmod 0755 /system/bin/RescueStarter
+#    chown graphics /system/bin/RescueServer
+#    chmod 0755 /system/bin/RescueServer
 
-    mount ext4 /dev/block/mmcblk0p9 /system ro wait noatime remount
+#    mount ext4 /dev/block/mmcblk0p9 /system ro wait noatime remount
 
 # Permissions for backlight
     chown system system /sys/class/backlight/panel/brightness
